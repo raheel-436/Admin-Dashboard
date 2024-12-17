@@ -36,6 +36,16 @@
   --transition: all 300ms ease;
 }
 
+/* Dark-Theme Variables (Apply using JS)*/
+.dark-theme-variables {
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
 html {
   font-size: 14px;
 }
@@ -589,7 +599,7 @@ main .recent-orders a {
 
   aside {
     position: fixed;
-    left: 0;
+    left: -100%;
     background-color: var(--color-white);
     width: 18rem;
     z-index: 3;
@@ -597,6 +607,13 @@ main .recent-orders a {
     height: 100vh;
     padding-right: var(--card-padding);
     display: none; /*using JS to show it*/
+    animation: showMenu 400ms forwards;
+  }
+
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
   }
 
   aside .logo {
