@@ -21,3 +21,7 @@ themeToggler.addEventListener("click", () => {
   // Toggle the 'active' class between the spans
   spans.forEach((span) => span.classList.toggle("active"));
 });
+/*
+Explanation:
+querySelectorAll: It selects all the span elements inside .theme-toggler.
+forEach: Loops through both spans and toggles the active class on each click.*/
